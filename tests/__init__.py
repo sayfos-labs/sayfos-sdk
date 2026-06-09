@@ -1,0 +1,1 @@
+﻿"""Sayfos SDK test suite — protocol conformance and pipeline behaviour."""
