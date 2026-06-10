@@ -1,5 +1,5 @@
 ﻿"""
-Tests for Sayfos Preflight — 计划预适配四种策略。
+Tests for Sayfos Preflight strategies.
 
 Covers:
   - PlanDeclaration creation

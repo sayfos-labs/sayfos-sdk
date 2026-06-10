@@ -315,7 +315,7 @@ class AuditSummary:
 @dataclass(frozen=True)
 class Budget:
     """
-    budget governance 代理权预算 — a machine-readable, consumable, transferable,
+    Machine-readable, consumable, transferable,
     revocable budget object that bounds an automated execution
     agent's authority.
 
@@ -421,7 +421,7 @@ class Budget:
         quotas: dict[str, float],
     ) -> "Budget":
         """
-        budget governance 子预算继承 — create a constrained child budget.
+        Create a constrained child budget.
         The child's quotas MUST be <= parent's remaining.
         """
         for dim, limit in quotas.items():
@@ -446,7 +446,7 @@ class Budget:
 @dataclass(frozen=True)
 class ActionConstraint:
     """
-    budget governance S4 输出 — constraints propagated to bound current and
+    Constraints propagated to bound current and
     subsequent action scope after budget adjudication.
     """
 

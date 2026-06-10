@@ -59,7 +59,7 @@ class BaseVerifier(ABC):
 
 class CausalConsistencyVerifier(BaseVerifier):
     """
-    embodied consistency 具身验真 — verify causality between digital action and physical state.
+    Verify causal consistency between a digital action and physical state.
 
     A break (digital-active but physical-silent) produces BLACK_VERDICT
     with BLOCK constraint.  Partial evidence produces degraded score
@@ -139,7 +139,7 @@ class CausalConsistencyVerifier(BaseVerifier):
 
 class BudgetGovernanceVerifier(BaseVerifier):
     """
-    budget governance 代理权预算治理 — four-step skeleton:
+    Budget governance verifier:
 
     S1  Budget object already determined (carried in request or
         managed by external budget store).
@@ -258,7 +258,7 @@ def _low_watermark(dim: str) -> float:
 
 class SourceChainVerifier(BaseVerifier):
     """
-    source-chain integrity 动作来源链完整性验证 — four-step skeleton:
+    Source-chain integrity verifier:
 
     S1  Source chain object generated at interception (ActionDeclaration
         carries the chain fields; ChainEntry builds the hash link).

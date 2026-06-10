@@ -14,6 +14,7 @@ python examples/<name>.py
 
 | Example | Scenario |
 | --- | --- |
+| api_cost_budget.py | Capping AI agent API calls and provider cost before execution |
 | remote_control_detection.py | Detecting silent remote-control signals before a high-risk action |
 | financial_fraud_detection.py | Context-aware intervention for high-risk financial actions |
 | prompt_injection_isolation.py | Isolating actions influenced by untrusted input sources |

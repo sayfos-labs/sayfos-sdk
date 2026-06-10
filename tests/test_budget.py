@@ -130,7 +130,7 @@ class TestBudgetManager:
         assert affected[0].status == BudgetStatus.REVOKED
 
     def test_revoke_propagation_to_children(self):
-        """budget governance 撤销传播 — revoke parent → all children frozen."""
+        """Revoking a parent budget propagates to all child budgets."""
         mgr = BudgetManager()
         parent = mgr.create_budget(owner_id="root", quotas={"amount_cny": 10000})
 

@@ -109,9 +109,9 @@ class SayfosRuntime:
         """
         Run plan preflight before any step is executed.
 
-        1. S1: 计划 + 边界约束已由调用方构建
-        2. S2: 引擎执行步骤级边界预验真
-        3. S3: 返回含裁决的预验真结果
+        1. The caller provides the plan and execution boundary.
+        2. The engine evaluates step-level boundary consumption.
+        3. The method returns a preflight result with a verdict.
         """
         engine = PreflightEngine()
         return engine.preflight(plan, boundary, strategy)
@@ -122,7 +122,7 @@ class SayfosRuntime:
         budget_id: str,
         strategy: PreflightStrategy = PreflightStrategy.SEQUENTIAL,
     ) -> PreflightResult:
-        """向后兼容：从预算ID构建边界约束后执行预验真。"""
+        """Compatibility wrapper: build a boundary from a budget ID."""
         budget = self.store.get(budget_id)
         if not budget:
             return PreflightResult(

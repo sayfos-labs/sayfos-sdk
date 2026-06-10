@@ -1,13 +1,9 @@
 ﻿"""
 Sayfos Protocol — Budget store (budget governance runtime).
 
-Abstract interface and in-memory implementation for proxy-authority
-budget lifecycle management.  Directly implements budget governance 的四步骨架:
-
-  S1  Budget.create()     — 确定代理权预算对象
-  S2  BudgetStore.consume() — 预算适配 + 消耗
-  S3  BudgetManager        — 预算裁决包装
-  S4  propagate_revocation — 撤销传播 + 连锁降权
+Abstract interface and in-memory implementation for machine-readable budget
+lifecycle management. Budgets can be created, consumed, frozen, revoked, and
+propagated across parent-child delegation trees.
 """
 
 from __future__ import annotations

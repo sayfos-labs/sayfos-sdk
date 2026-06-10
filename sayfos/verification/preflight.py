@@ -124,26 +124,26 @@ class ExecutionBoundary:
 
     boundary_id: str = field(default_factory=lambda: str(uuid.uuid4()))
 
-    # 代理权预算边界 (budget governance 维度)
+    # Budget limits
     budget: dict[str, float] = field(default_factory=dict)
 
-    # 时间窗口边界
+    # Time-window limits
     time_window_start: Optional[datetime] = None
     time_window_end: Optional[datetime] = None
 
-    # 资源配额边界
+    # Resource quotas
     resource_quotas: dict[str, float] = field(default_factory=dict)
 
-    # 物理安全边界
+    # Physical safety limits
     spatial_bounds: Optional[str] = None
     speed_limit: Optional[float] = None
     proximity_limit_cm: Optional[float] = None
 
-    # 外部影响边界
+    # External impact limits
     max_external_calls: int = 0
     max_data_egress_mb: float = 0.0
 
-    # 合规边界
+    # Compliance tags and approvals
     compliance_tags: tuple[str, ...] = ()
     required_approvals: tuple[str, ...] = ()
 
@@ -222,7 +222,7 @@ class PreflightResult:
         return self.limits_remaining_after
 
 
-# ── 辅助函数 ────────────────────────────────────────────────────────
+# Helper functions
 
 
 def _deductions_from_action(action: ActionDeclaration) -> dict[str, float]:
@@ -276,7 +276,7 @@ class PreflightEngine:
             boundary = ExecutionBoundary.budget_only(boundary)
         return self.preflight(plan, boundary, strategy)
 
-    # ── 顺序累加法 ────────────────────────────────────────────
+    # Sequential accumulation strategy
 
     def _sequential(
         self, plan: PreflightPlan, boundary: ExecutionBoundary,
@@ -335,7 +335,7 @@ class PreflightEngine:
             verdict=PreflightVerdict.APPROVE,
         )
 
-    # ── 快速全量法 ────────────────────────────────────────────
+    # Full aggregate strategy
 
     def _full_aggregate(
         self, plan: PreflightPlan, boundary: ExecutionBoundary,
@@ -368,7 +368,7 @@ class PreflightEngine:
             verdict=PreflightVerdict.APPROVE,
         )
 
-    # ── 关键步骤法 ────────────────────────────────────────────
+    # Key-step strategy
 
     def _key_step(
         self, plan: PreflightPlan, boundary: ExecutionBoundary,
@@ -411,7 +411,7 @@ class PreflightEngine:
             verdict=PreflightVerdict.APPROVE,
         )
 
-    # ── 风险加权法 ────────────────────────────────────────────
+    # Risk-weighted strategy
 
     def _risk_weighted(
         self, plan: PreflightPlan, boundary: ExecutionBoundary,
