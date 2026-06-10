@@ -1,6 +1,8 @@
 # Sayfos SDK
 
-Sayfos SDK is a lightweight community SDK for agent runtime control.
+Sayfos SDK is an AI agent security SDK for runtime guardrails: tool-call
+control, source-chain provenance, budget limits, plan preflight,
+prompt-injection isolation, and adjudication tokens.
 
 It provides reference data objects, verification hooks, and framework adapters
 for checking automated actions before they reach tools, APIs, data systems,
@@ -8,6 +10,24 @@ cloud resources, or embodied endpoints.
 
 This repository is a community reference implementation, not the full
 enterprise gateway or managed control plane.
+
+## Official Upstream
+
+This repository is the official upstream reference implementation of the
+Sayfos SDK:
+
+```text
+https://github.com/sayfos-labs/sayfos-sdk
+```
+
+Forks and derivative projects are welcome under the Apache 2.0 license, but
+they must preserve applicable license and notice files and must not imply that
+they are the official Sayfos SDK, Sayfos Enterprise, a certified Sayfos gateway,
+or an authorized Sayfos service unless separately approved in writing.
+
+If you build on this project, please identify your work as based on or
+compatible with the public Sayfos SDK interfaces rather than as the official
+upstream project.
 
 ## What Sayfos Helps With
 
