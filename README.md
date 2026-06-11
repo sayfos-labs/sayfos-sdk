@@ -165,5 +165,8 @@ offerings and are not provided by this community SDK.
 
 See LICENSE for the Apache 2.0 license.
 
+See CONTRIBUTING.md, DCO.md, and GOVERNANCE.md for contribution rules,
+developer sign-off requirements, and project governance.
+
 See PATENT_NOTICE.md and TRADEMARK.md for additional patent and trademark
 notices related to this project.
