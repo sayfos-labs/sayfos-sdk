@@ -1,5 +1,7 @@
 # Sayfos SDK
 
+[中文文档](README_zh.md)
+
 Sayfos SDK is an AI agent security SDK for runtime guardrails: tool-call
 control, source-chain provenance, budget limits, plan preflight,
 prompt-injection isolation, and adjudication tokens.
