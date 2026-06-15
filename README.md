@@ -33,12 +33,13 @@ upstream project.
 
 ## What Sayfos Helps With
 
-Automated execution agents often need to answer three questions before a
-high-risk action is allowed:
-
-1. Does the action have a verifiable source chain?
-2. Is the action still within its delegated budget and runtime authority?
-3. Does the digital action have enough contextual or embodied evidence?
+| Without Sayfos | With Sayfos |
+| --- | --- |
+| Agent loops cost $300 overnight before you wake up | Budget cap blocks the 51st call, $5.00 hard stop |
+| "Why did the agent wire $5k?" — no one knows | Source chain traces the authorization back to `auth://user/cfo` |
+| Prompt injection tricks the agent into executing `rm -rf` | Intent verification checks runtime evidence before action |
+| Multi-step plan silently exceeds boundaries at step 7 | Plan preflight validates the entire plan before step 1 |
+| Robot arm executes a command without confirming physical presence | Embodied verification cross-checks digital vs physical state |
 
 Sayfos SDK exposes common objects and lightweight reference engines for those
 checks so developers can add runtime guardrails around AI agents, RPA systems,
@@ -154,6 +155,18 @@ sayfos budget create --owner agent-1 --quotas '{"amount_cny":5000}'
 sayfos plan preflight --plan '{"steps":[]}' --budget-id <budget-id>
 ```
 
+## Roadmap
+
+| Milestone | Status |
+| --- | --- |
+| Core SDK (objects, pipeline, CLI, LangChain adapter) | ✅ Released (v0.1.0) |
+| Budget governance engine | ✅ Released |
+| Source-chain integrity engine | ✅ Released |
+| Plan preflight engine | ✅ Released |
+| Embodied verification engine | ✅ Released |
+| CrewAI / Dify / AutoGen adapters | ⬜ 2026 Q3 |
+| Sayfos Cloud (managed gateway + audit dashboard) | ⬜ 2026 Q4 |
+
 ## Open Source Boundary
 
 This repository provides public interfaces, reference objects, lightweight
@@ -165,10 +178,7 @@ offerings and are not provided by this community SDK.
 
 ## Notices
 
-See LICENSE for the Apache 2.0 license.
-
-See CONTRIBUTING.md, DCO.md, and GOVERNANCE.md for contribution rules,
-developer sign-off requirements, and project governance.
-
-See PATENT_NOTICE.md and TRADEMARK.md for additional patent and trademark
-notices related to this project.
+- Apache 2.0 — see [LICENSE](LICENSE)
+- Patent license for open-source users is included under Apache 2.0 — see [PATENT_NOTICE](PATENT_NOTICE.md)
+- Contribution guide — see [CONTRIBUTING](CONTRIBUTING.md)
+- Trademark — see [TRADEMARK](TRADEMARK.md)
