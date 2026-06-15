@@ -73,6 +73,4 @@ for task in tasks:
 - Apache 2.0：见 LICENSE
 - 专利声明：见 PATENT_NOTICE.md
 - 贡献规则：见 CONTRIBUTING.md
-- DCO 签署：见 DCO.md
-- 治理规则：见 GOVERNANCE.md
 - 商标声明：见 TRADEMARK.md

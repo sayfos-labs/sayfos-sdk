@@ -203,6 +203,4 @@ offerings and are not provided by this community SDK.
 - Apache 2.0 - see [LICENSE](LICENSE)
 - Patent notice - see [PATENT_NOTICE](PATENT_NOTICE.md)
 - Contribution guide - see [CONTRIBUTING](CONTRIBUTING.md)
-- DCO sign-off - see [DCO](DCO.md)
-- Governance - see [GOVERNANCE](GOVERNANCE.md)
 - Trademark notice - see [TRADEMARK](TRADEMARK.md)
