@@ -1,6 +1,6 @@
 # Sayfos SDK
 
-[中文文档](README_zh.md)
+[Chinese README](README_zh.md)
 
 Sayfos SDK is an AI agent security SDK for runtime guardrails: tool-call
 control, source-chain provenance, budget limits, plan preflight,
@@ -12,6 +12,25 @@ cloud resources, or embodied endpoints.
 
 This repository is a community reference implementation, not the full
 enterprise gateway or managed control plane.
+
+## Adoption Policy
+
+Sayfos SDK is designed to be easy to adopt.
+
+You may use the community SDK under Apache 2.0 in personal projects,
+commercial products, internal tools, research prototypes, open-source
+projects, and production applications. No registration, usage reporting,
+paid plan, contributor agreement, or Sayfos Cloud dependency is required to
+use the SDK code.
+
+You may also fork, modify, redistribute, and build applications or services
+on top of this SDK, provided that you follow the Apache 2.0 license and keep
+the applicable license and notice files.
+
+The open-source license does not grant rights to use Sayfos trademarks,
+certification marks, official service names, or to present a fork or
+derivative project as the official Sayfos SDK, Sayfos Enterprise, a certified
+Sayfos gateway, or an authorized Sayfos service.
 
 ## Official Upstream
 
@@ -36,7 +55,7 @@ upstream project.
 | Without Sayfos | With Sayfos |
 | --- | --- |
 | Agent loops cost $300 overnight before you wake up | Budget cap blocks the 51st call, $5.00 hard stop |
-| "Why did the agent wire $5k?" — no one knows | Source chain traces the authorization back to `auth://user/cfo` |
+| "Why did the agent wire $5k?" - no one knows | Source chain traces the authorization back to `auth://user/cfo` |
 | Prompt injection tricks the agent into executing `rm -rf` | Intent verification checks runtime evidence before action |
 | Multi-step plan silently exceeds boundaries at step 7 | Plan preflight validates the entire plan before step 1 |
 | Robot arm executes a command without confirming physical presence | Embodied verification cross-checks digital vs physical state |
@@ -159,18 +178,21 @@ sayfos plan preflight --plan '{"steps":[]}' --budget-id <budget-id>
 
 | Milestone | Status |
 | --- | --- |
-| Core SDK (objects, pipeline, CLI, LangChain adapter) | ✅ Released (v0.1.0) |
-| Budget governance engine | ✅ Released |
-| Source-chain integrity engine | ✅ Released |
-| Plan preflight engine | ✅ Released |
-| Embodied verification engine | ✅ Released |
-| CrewAI / Dify / AutoGen adapters | ⬜ 2026 Q3 |
-| Sayfos Cloud (managed gateway + audit dashboard) | ⬜ 2026 Q4 |
+| Core SDK (objects, pipeline, CLI, LangChain adapter) | Released (v0.1.0) |
+| Budget governance engine | Released |
+| Source-chain integrity engine | Released |
+| Plan preflight engine | Released |
+| Embodied verification engine | Released |
+| CrewAI / Dify / AutoGen adapters | Planned for 2026 Q3 |
+| Sayfos Cloud (managed gateway + audit dashboard) | Planned for 2026 Q4 |
 
 ## Open Source Boundary
 
 This repository provides public interfaces, reference objects, lightweight
 verification engines, examples, and adapters under Apache 2.0.
+
+The intended open-source boundary is broad enough for developers to build,
+test, integrate, and ship real applications with the SDK.
 
 Enterprise gateway capabilities, managed policy engines, certification
 services, production control planes, and commercial support are separate
@@ -178,7 +200,9 @@ offerings and are not provided by this community SDK.
 
 ## Notices
 
-- Apache 2.0 — see [LICENSE](LICENSE)
-- Patent license for open-source users is included under Apache 2.0 — see [PATENT_NOTICE](PATENT_NOTICE.md)
-- Contribution guide — see [CONTRIBUTING](CONTRIBUTING.md)
-- Trademark — see [TRADEMARK](TRADEMARK.md)
+- Apache 2.0 - see [LICENSE](LICENSE)
+- Patent notice - see [PATENT_NOTICE](PATENT_NOTICE.md)
+- Contribution guide - see [CONTRIBUTING](CONTRIBUTING.md)
+- DCO sign-off - see [DCO](DCO.md)
+- Governance - see [GOVERNANCE](GOVERNANCE.md)
+- Trademark notice - see [TRADEMARK](TRADEMARK.md)
