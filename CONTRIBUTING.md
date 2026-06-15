@@ -67,50 +67,6 @@ commercial offerings, private roadmaps, or non-public implementations.
 
 See TRADEMARK.md and PATENT_NOTICE.md for additional notices.
 
-## Contributor Patent License Grant
-
-Every contributor whose pull request is merged into this repository
-automatically receives a **free, royalty-free, non-transferable patent
-license** from the Sayfos patent holders.  This license permits the
-contributor to integrate Sayfos SDK into their own products and services
-without paying patent royalties, subject to the limitations below.
-
-The intent is simple: *You help build the SDK, you can use it in your
-product — for free.*
-
-### License Scope
-
-The license covers **integration and use of Sayfos SDK as a dependency**
-inside the contributor's own product.  It does **not** grant a separate
-right to extract the SDK's protocol semantics and re-implement a competing
-runtime-control product outside the Sayfos SDK codebase.
-
-### License Limitations
-
-The free patent license granted to contributors **automatically terminates**
-when any of the following thresholds is met by the contributor's product
-that integrates Sayfos SDK:
-
-| Threshold | Applies to |
-|-----------|-----------|
-| Annual active end-users ≥ **50,000** | Consumer-facing products (B2C apps, mobile apps) |
-| Annual contract customers ≥ **20** enterprise entities | Business-facing products (SaaS, middleware, gateways) |
-| Annual revenue related to the integrating product ≥ **¥2,000,000 CNY** | Any product (fallback) |
-
-If a contributor's product exceeds any of the above thresholds, the
-contributor must contact the Sayfos rights holders within 30 days to agree
-on commercially reasonable patent license terms.  The thresholds are
-intentionally set high enough to let individual developers and small teams
-grow without worrying about royalties, while ensuring that large-scale
-commercial deployments contribute back to the ecosystem.
-
-### Non-Transferability
-
-This license is granted to the contributor in person (or the single
-corporate entity they represent).  It may not be transferred, sublicensed,
-or assigned.  If the contributor's product line is acquired, the acquirer
-must negotiate its own license with the Sayfos rights holders.
-
 ## Pull Request Guidelines
 
 Before opening a pull request:
